@@ -18,6 +18,34 @@ class Create extends React.Component {
         };
     }
 
+    onChange = (e) => {
+        const state = this.state;
+        state[e.target.name] = e.target.value;
+        this.setState(state);
+    }
+
+    onSubmit = (e) => {
+        e.preventDefault();
+        const { title, description, author } = this.state;
+
+        this.ref.add({
+            title, 
+            description,
+            author
+        })
+        .then(docRef => {
+            this.setState({
+                title: '',
+                description: '',
+                author: ''
+            });
+            this.props.history.push("/");
+        })
+        .catch(error => {
+            console.log('Error ', error);
+        });
+    }
+
     render() {
         const { title, description, author } = this.state;
 
