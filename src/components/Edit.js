@@ -1,8 +1,5 @@
 import React from 'react';
 
-//Firebase
-import firebase from '../Firebase';
-
 //Router
 import { Link } from 'react-router-dom';
 
@@ -55,7 +52,7 @@ class Edit extends React.Component {
                                     value={this.state.author} onChange={this.onChange} 
                                     placeholder="Author" />
                             </div>
-                            <button type="submit" className="btn btn-sucess">Submit</button>
+                            <button type="submit" className="btn btn-success">Submit</button>
                         </form>
                     </div>
                 </div>

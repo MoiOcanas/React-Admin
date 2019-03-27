@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 //Router
@@ -40,16 +39,16 @@ class App extends Component {
 
   render() {
     return (
-      <div class="container">
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h3 class="panel-title">
+      <div className="container">
+        <div className="panel panel-default">
+          <div className="panel-heading">
+            <h3 className="panel-title">
               POST LIST
             </h3>
           </div>
-          <div class="panel-body">
+          <div className="panel-body">
             <h4><Link to="/create">Add Post</Link></h4>
-            <table class="table table-stripe">
+            <table className="table table-stripe">
               <thead>
                 <tr>
                   <th>Title</th>
@@ -58,8 +57,8 @@ class App extends Component {
                 </tr>
               </thead>
               <tbody>
-                {this.state.posts.map(post =>
-                  <tr>
+                {this.state.posts.map((post, i) =>
+                  <tr key={i}>
                     <td><Link to={`/show/${post.key}`}>{post.title}</Link></td>
                     <td>{post.description}</td>
                     <td>{post.author}</td>
