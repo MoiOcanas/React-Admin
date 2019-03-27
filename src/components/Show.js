@@ -18,7 +18,8 @@ class Show extends React.Component {
             comments: [],
         }
 
-        this.loadComments =  this.loadComments.bind(this);
+        this.loadComments = this.loadComments.bind(this);
+        this.deleteComment = this.deleteComment.bind(this);
     }
 
     onChange = (e) => {
@@ -61,7 +62,6 @@ class Show extends React.Component {
         const ref = firebase.firestore().collection('posts').doc(this.props.match.params.id);
         ref.get()
             .then(doc => {
-                console.log(doc.data());
                 if (doc.exists) {
                     this.setState({
                         post: doc.data(),
@@ -76,6 +76,8 @@ class Show extends React.Component {
         this.loadComments();
     }
 
+
+
     delete(id) {
         firebase.firestore().collection('posts').doc(id).delete()
             .then(() => {
@@ -85,6 +87,11 @@ class Show extends React.Component {
             .catch(error => {
                 console.error('Error: ', error);
             })
+    }
+
+    deleteComment(id) {
+        firebase.firestore().collection('comments').doc(id).delete();
+        this.loadComments();
     }
 
     render() {
@@ -124,14 +131,7 @@ class Show extends React.Component {
                 <div className="pane panel-default">
                    <ul>
                        {
-                           comments.map((com, i) => 
-                                <li key={i}>
-                                    {com.comment}
-                                    <button className="btn btn-danger">
-                                        Delete
-                                    </button>
-                                </li>
-                           )
+                           comments.map((com, i) => <li key={i}>{ com.comment }</li>)
                        }
                    </ul>
                 </div>
