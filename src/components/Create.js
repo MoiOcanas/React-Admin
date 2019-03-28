@@ -3,9 +3,6 @@ import React from 'react';
 //Firebase
 import firebase from '../Firebase';
 
-//Router
-import { Link } from 'react-router-dom';
-
 //Styles
 import '../styles/create.css'
 
