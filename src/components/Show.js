@@ -26,6 +26,8 @@ class Show extends React.Component {
 
         this.loadComments = this.loadComments.bind(this);
         this.deleteComment = this.deleteComment.bind(this);
+        this.onChange = this.onChange.bind(this);
+        this.onSubmit = this.onSubmit.bind(this);
     }
 
     onChange(e){
