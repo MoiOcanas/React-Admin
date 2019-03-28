@@ -29,28 +29,23 @@ class Edit extends React.Component {
                         </div>
                         <div>
                             <form onSubmit={this.onSubmit}>
-                                <div >
-                                    <label for="title">Title: </label>
                                     <input type="text"
+                                        className="edit-input"
                                         name="title"
                                         value={this.state.title} onChange={this.onChange}
                                         placeholder="Title" />
-                                </div>
-                                <div>
-                                    <label for="description">Description: </label>
                                     <input type="text"
                                         name="description"
+                                        className="edit-input"
                                         value={this.state.description} onChange={this.onChange}
                                         placeholder="Description" />
-                                </div>
-                                <div>
-                                    <label for="author">Author: </label>
                                     <input type="text"
                                         name="author"
+                                        className="edit-input"
                                         value={this.state.author} onChange={this.onChange}
                                         placeholder="Author" />
-                                </div>
-                                <button type="submit">Submit</button>
+                                        <br />
+                                <button type="submit" className="edit-button">Submit</button>
                             </form>
                         </div>
                     </div>

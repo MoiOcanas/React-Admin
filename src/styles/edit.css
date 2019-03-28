@@ -12,9 +12,26 @@
 }
 
 .edit-input {
-    width: 70%;
+    width: 90%;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
     box-sizing: border-box;
-  }
+}
+
+.edit-button {
+    background: #06A142;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 8px;
+    border: none;
+    cursor: pointer;
+    transition: box-shadow 0.3s;
+    text-align: center;
+}
+
+  .edit-button:hover {
+    box-shadow: 2px 2px 3px #727272;
+    text-decoration: none;
+    color: #fff;
+}
