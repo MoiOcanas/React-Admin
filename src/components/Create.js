@@ -42,7 +42,6 @@ class Create extends React.Component {
                     description: '',
                     author: ''
                 });
-                this.props.history.push("/");
             })
             .catch(error => {
                 console.log('Error ', error);
