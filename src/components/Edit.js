@@ -34,13 +34,13 @@ class Edit extends React.Component {
         });
     }
 
-    onChange = (e) => {
+    onChange(e){
         const state = this.state
         state[e.target.name] = e.target.value;
         this.setState({ board: state });
     }
 
-    onSubmit = (e) => {
+    onSubmit(e){
         e.preventDefault();
 
         const { title, description, author } = this.state;
