@@ -1,0 +1,34 @@
+.create-container {
+    background-color: rgba(252, 252, 252, 1);
+   padding: 20px;
+   margin: 100px 0px 0px 303px;
+   width: 60%;
+   box-shadow: 1px 2px 1px #aaaaaa;
+}
+
+.create-input {
+    width: 70%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    box-sizing: border-box;
+
+}
+
+.create-button {
+    background: #0678A1;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 8px;
+    border: none;
+    cursor: pointer;
+    transition: box-shadow 0.3s;
+}
+
+.create-button:hover {
+    box-shadow: 2px 2px 3px #727272;
+}
+
+h3 {
+    margin: 10px;
+}

@@ -6,6 +6,9 @@ import firebase from '../Firebase';
 //Router
 import { Link } from 'react-router-dom';
 
+//Styles
+import '../styles/create.css'
+
 class Create extends React.Component {
     constructor() {
         super();
@@ -29,66 +32,56 @@ class Create extends React.Component {
         const { title, description, author } = this.state;
 
         this.ref.add({
-            title, 
+            title,
             description,
             author
         })
-        .then(docRef => {
-            this.setState({
-                title: '',
-                description: '',
-                author: ''
+            .then(docRef => {
+                this.setState({
+                    title: '',
+                    description: '',
+                    author: ''
+                });
+                this.props.history.push("/");
+            })
+            .catch(error => {
+                console.log('Error ', error);
             });
-            this.props.history.push("/");
-        })
-        .catch(error => {
-            console.log('Error ', error);
-        });
     }
 
     render() {
         const { title, description, author } = this.state;
 
-        return(
-            <div>
+        return (
+            <div className="create-container">
                 <div>
-                    <div>
-                        <h3>
-                            ADD POST
-                        </h3>
-                    </div>
-                    <div>
-                        <h4>
-                            <Link to="/">Post List</Link>
-                        </h4>
-                        <form onSubmit={this.onSubmit}>
-                            <div>
-                                <label forHtml="title">Title: </label>
-                                <input type="text" 
-                                    name="title" 
-                                    value={title} 
-                                    onChange={this.onChange} 
-                                    placeholder="Title" />
-                            </div>
-                            <div>
-                                <label forHtml="description">Description: </label>
-                                <input type="text" 
-                                    name="description" 
-                                    value={description} 
-                                    onChange={this.onChange} 
-                                    placeholder="Description" />
-                            </div>
-                            <div>
-                                <label forHtml="author">Author: </label>
-                                <input type="text" 
-                                    name="author" 
-                                    value={author} 
-                                    onChange={this.onChange} 
-                                    placeholder="Author" />
-                            </div>
-                            <button type="submit">Submit</button>
-                        </form>
-                    </div>
+                    <h3>
+                        ADD POST
+                    </h3>
+                </div>
+                <div>
+                    <form onSubmit={this.onSubmit}>
+                            <input type="text"
+                                name="title"
+                                value={title}
+                                className="create-input"
+                                onChange={this.onChange}
+                                placeholder="Title" />
+                            <input type="text"
+                                name="description"
+                                value={description}
+                                className="create-input"
+                                onChange={this.onChange}
+                                placeholder="Description" />
+                            <input type="text"
+                                name="author"
+                                value={author}
+                                className="create-input"
+                                onChange={this.onChange}
+                                placeholder="Author" />
+                                <br />
+                        <button type="submit" className="create-button">Submit</button>
+                    </form>
                 </div>
             </div>
         );
