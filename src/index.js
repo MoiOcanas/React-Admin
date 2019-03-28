@@ -14,10 +14,12 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import Edit from './components/Edit';
 import Create from './components/Create';
 import Show from './components/Show';
+import Nav from './components/Nav';
 
 ReactDOM.render(
     <Router>
         <div>
+            <Nav />
             <Route exact path="/" component={App} />
             <Route path="/edit/:id" component={Edit} />
             <Route path="/create" component={Create} />

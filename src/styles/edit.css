@@ -1,0 +1,20 @@
+.Edit {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.edit-container {
+    background-color: rgba(252, 252, 252, 1);
+    padding: 20px;
+    margin: 100px 0px 0px 303px;
+    width: 60%;
+    box-shadow: 1px 2px 1px #aaaaaa;
+}
+
+.edit-input {
+    width: 70%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    box-sizing: border-box;
+  }

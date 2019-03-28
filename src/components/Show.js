@@ -6,6 +6,12 @@ import firebase from '../Firebase';
 //Router
 import { Link } from 'react-router-dom';
 
+//Components
+import Comment from './Comment';
+
+//Styles
+import '../styles/show.css';
+
 class Show extends React.Component {
     constructor(props) {
         super(props);
@@ -97,43 +103,41 @@ class Show extends React.Component {
     render() {
         const { comments, comment } = this.state;
         return (
-            <div className="container">
-                <div className="panel panel-default">
-                    <div className="panel-heading">
-                        <h4>
-                            <Link to="/">Posts list</Link>
-                        </h4>
+            <div>
+                <div className="show-container">
+                    <div>
                         <h3>
                             {this.state.post.title}
                         </h3>
                     </div>
-                    <div className="panel-body">
+                    <div>
                         <dl>
-                            <dt>Description:</dt>
+                            <h4>Description</h4>
                             <dd>{this.state.post.description}</dd>
-                            <dt>Author</dt>
+                            <h4>Author</h4>
                             <dd>{this.state.post.author}</dd>
                         </dl>
-                        <Link to={`/edit/${this.state.key}`} className="btn btn-success">Edit</Link>
-                        <button onClick={this.delete.bind(this, this.state.key)} className="btn btn-danger">Delete</button>
+                        <Link to={`/edit/${this.state.key}`}  className="edit-button">Edit Post</Link>
+                        <button onClick={this.delete.bind(this, this.state.key)} className="delete-button">Delete</button>
                     </div>
                 </div>
-                <div className="panel panel-default">
+                <div className="comment-container">
                     <h4>Add a comment...</h4>
                     <input
-                        className="form-control"
                         name="comment"
+                        className="comment-input"
                         onChange={this.onChange}
                         value={comment}
                         type="text" />
-                    <button className="btn btn-success" onClick={this.onSubmit}>Submit</button>
+                        <button onClick={this.onSubmit} className="comment-button">Add Comment</button>
                 </div>
-                <div className="pane panel-default">
-                   <ul>
+                
+                <div>
+                   <div>
                        {
-                           comments.map((com, i) => <li key={i}>{ com.comment }</li>)
+                           comments.map((com, i) => <Comment key={i} comment={com.comment}/>)
                        }
-                   </ul>
+                   </div>
                 </div>
             </div>
         );

@@ -63,7 +63,7 @@ class Create extends React.Component {
                         </h4>
                         <form onSubmit={this.onSubmit}>
                             <div className="form-group">
-                                <label for="title">Title: </label>
+                                <label forHtml="title">Title: </label>
                                 <input type="text" 
                                     className="form-control" 
                                     name="title" 
@@ -72,7 +72,7 @@ class Create extends React.Component {
                                     placeholder="Title" />
                             </div>
                             <div className="form-group">
-                                <label for="description">Description: </label>
+                                <label forHtml="description">Description: </label>
                                 <input type="text" 
                                     className="form-control" 
                                     name="description" 
@@ -81,7 +81,7 @@ class Create extends React.Component {
                                     placeholder="Description" />
                             </div>
                             <div className="form-group">
-                                <label for="author">Author: </label>
+                                <label forHtml="author">Author: </label>
                                 <input type="text" 
                                     className="form-control" 
                                     name="author" 

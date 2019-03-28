@@ -39,33 +39,35 @@ class App extends Component {
 
   render() {
     return (
-      <div className="container">
-        <div className="panel panel-default">
-          <div className="panel-heading">
-            <h3 className="panel-title">
-              POST LIST
+      <div className="App">
+        <div className="container">
+          <div className="panel panel-default">
+            <div className="panel-heading">
+              <h3 className="panel-title">
+                POST LIST
             </h3>
-          </div>
-          <div className="panel-body">
-            <h4><Link to="/create">Add Post</Link></h4>
-            <table className="table table-stripe">
-              <thead>
-                <tr>
-                  <th>Title</th>
-                  <th>Description</th>
-                  <th>Author</th>
-                </tr>
-              </thead>
-              <tbody>
-                {this.state.posts.map((post, i) =>
-                  <tr key={i}>
-                    <td><Link to={`/show/${post.key}`}>{post.title}</Link></td>
-                    <td>{post.description}</td>
-                    <td>{post.author}</td>
+            </div>
+            <div className="panel-body">
+              <h4><Link to="/create">Add Post</Link></h4>
+              <table className="table table-stripe">
+                <thead>
+                  <tr>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Author</th>
                   </tr>
-                )}
-              </tbody>
-            </table>
+                </thead>
+                <tbody>
+                  {this.state.posts.map((post, i) =>
+                    <tr key={i}>
+                      <td><Link to={`/show/${post.key}`}>{post.title}</Link></td>
+                      <td>{post.description}</td>
+                      <td>{post.author}</td>
+                    </tr>
+                  )}
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </div>
