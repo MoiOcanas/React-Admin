@@ -40,15 +40,15 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="container">
+        <div className="app-container">
           <div className="panel panel-default">
             <div className="panel-heading">
               <h3 className="panel-title">
                 POST LIST
             </h3>
             </div>
-            <div className="panel-body">
-              <h4><Link to="/create">Add Post</Link></h4>
+            <div>
+            <h4><Link to="/create">Add Post</Link></h4> 
               <table className="table table-stripe">
                 <thead>
                   <tr>

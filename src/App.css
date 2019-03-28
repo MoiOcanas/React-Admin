@@ -3,3 +3,33 @@
   margin-top: 19px;
 }
 
+.app-container {
+  background-color: rgba(252, 252, 252, 1);
+ padding: 20px;
+ margin: 100px 0px 0px 303px;
+ width: 60%;
+ box-shadow: 1px 2px 1px #aaaaaa;
+}
+
+h4 {
+  margin: 20px 10px;
+}
+
+h4 a {
+  transition: letter-spacing 0.3s;
+}
+
+h4 a:hover {
+  text-decoration: none;
+  letter-spacing: 0.2em;
+}
+
+td a {
+  transition: letter-spacing 0.3s;
+}
+
+td a:hover {
+  text-decoration: none;
+  letter-spacing: 0.1em;
+}
+

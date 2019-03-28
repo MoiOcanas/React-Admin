@@ -50,46 +50,43 @@ class Create extends React.Component {
         const { title, description, author } = this.state;
 
         return(
-            <div className="container">
-                <div className="panel panel-default">
-                    <div className="panel-heading">
-                        <h3 className="panel-title">
+            <div>
+                <div>
+                    <div>
+                        <h3>
                             ADD POST
                         </h3>
                     </div>
-                    <div className="panel-body">
+                    <div>
                         <h4>
-                            <Link to="/" className="btn btn-primary">Post List</Link>
+                            <Link to="/">Post List</Link>
                         </h4>
                         <form onSubmit={this.onSubmit}>
-                            <div className="form-group">
+                            <div>
                                 <label forHtml="title">Title: </label>
                                 <input type="text" 
-                                    className="form-control" 
                                     name="title" 
                                     value={title} 
                                     onChange={this.onChange} 
                                     placeholder="Title" />
                             </div>
-                            <div className="form-group">
+                            <div>
                                 <label forHtml="description">Description: </label>
                                 <input type="text" 
-                                    className="form-control" 
                                     name="description" 
                                     value={description} 
                                     onChange={this.onChange} 
                                     placeholder="Description" />
                             </div>
-                            <div className="form-group">
+                            <div>
                                 <label forHtml="author">Author: </label>
                                 <input type="text" 
-                                    className="form-control" 
                                     name="author" 
                                     value={author} 
                                     onChange={this.onChange} 
                                     placeholder="Author" />
                             </div>
-                            <button type="submit" className="btn btn-success">Submit</button>
+                            <button type="submit">Submit</button>
                         </form>
                     </div>
                 </div>
