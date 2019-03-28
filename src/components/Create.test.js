@@ -13,5 +13,5 @@ describe('Create', () => {
         const wrapper = shallow(<Create />)
         expect(wrapper.find('form')).toHaveLength(1);
     })
-})
+});
 

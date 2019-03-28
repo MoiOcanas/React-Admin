@@ -28,13 +28,13 @@ class Show extends React.Component {
         this.deleteComment = this.deleteComment.bind(this);
     }
 
-    onChange = (e) => {
+    onChange(e){
         const state = this.state;
         state[e.target.name] = e.target.value;
         this.setState(state);
     }
 
-    onSubmit = (e) => {
+    onSubmit(e){
         e.preventDefault();
         const { comment } = this.state;
 

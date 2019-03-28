@@ -16,4 +16,4 @@ describe('Nav', () => {
         const wrapper = shallow(<Nav />)
         expect(wrapper.find('li')).toHaveLength(1);
     })
-})
+});
