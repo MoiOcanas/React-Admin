@@ -48,7 +48,7 @@ class App extends Component {
             </h3>
             </div>
             <div>
-            <h4><Link to={process.env.PUBLIC_URL + '/create'}>Add Post</Link></h4> 
+            <h4><Link to='/create'>Add Post</Link></h4> 
               <table className="table table-stripe">
                 <thead>
                   <tr>

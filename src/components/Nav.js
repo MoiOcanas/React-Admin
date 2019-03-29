@@ -11,7 +11,7 @@ const Nav = () => (
         <ul>
             <i className="fab fa-react fa-2x" style={{ float: 'left', padding: '10px', marginLeft: '5px', marginTop: '5px'}}> </i>
             <span style={{ float: 'left', padding: '10px', marginTop: '10px'}}>React-Firebase Admin</span>
-            <li><Link to={ process.env.PUBLIC_URL + "/"}>Home</Link></li>
+            <li><Link to= "/">Home</Link></li>
         </ul>
     </div>
 );
