@@ -5,7 +5,7 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 //Router
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { HashRouter as Router, Route } from 'react-router-dom';
 
 //Styles
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
@@ -17,7 +17,7 @@ import Show from './components/Show';
 import Nav from './components/Nav';
 
 ReactDOM.render(
-    <Router basename="/React-Admin">
+    <Router basename={process.env.PUBLIC_URL}>
         <div>
             <Nav />
             <Route path='/' component={App} />
