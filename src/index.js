@@ -17,7 +17,7 @@ import Show from './components/Show';
 import Nav from './components/Nav';
 
 ReactDOM.render(
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
         <div>
             <Nav />
             <Route path='/' component={App} />
