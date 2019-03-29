@@ -42,6 +42,7 @@ class Create extends React.Component {
                     description: '',
                     author: ''
                 });
+                
             })
             .catch(error => {
                 console.log('Error ', error);
