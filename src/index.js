@@ -20,10 +20,10 @@ ReactDOM.render(
     <Router basename={process.env.PUBLIC_URL}>
         <div>
             <Nav />
-            <Route path={process.env.PUBLIC_URL +'/'} component={App} />
-            <Route path={process.env.PUBLIC_URL +'/edit/:id'} component={Edit} />
-            <Route path={process.env.PUBLIC_URL + '/create'} component={Create} />
-            <Route path={process.env.PUBLIC_URL + '/show/:id'} component={Show} />
+            <Route path='/' component={App} />
+            <Route path='/edit/:id' component={Edit} />
+            <Route path= '/create' component={Create} />
+            <Route path= '/show/:id' component={Show} />
         </div>
     </Router>
     , document.getElementById('root'));
